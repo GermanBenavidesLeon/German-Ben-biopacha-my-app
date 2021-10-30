@@ -1,0 +1,23 @@
+.classCount {
+    background-color: #7AFA94;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 450px;
+    border-radius: 10px;
+    
+}
+
+button{
+    margin: 0px 15px;
+}
+
+label {
+    margin: 0px 20px;
+    text-align: center;
+    
+}
