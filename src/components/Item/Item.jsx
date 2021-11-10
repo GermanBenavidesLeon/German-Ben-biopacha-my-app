@@ -10,8 +10,8 @@ function Item({prod}) {
                 <div class="col-md-4 cardItem">
                     <div class="card-body">
                         <h5 class="card-title">{prod.name}</h5>
-                        <p class="card-text">{prod.description}, su precio es de $ {prod.price}.</p>
-                        <a href="#" class="btn btnItemList">Detalles del Producto</a>
+                        <p class="card-text">{prod.categoria}.</p>
+                        <a href='#' class="btn btnItemList">Detalles del Producto</a>
                     </div>
                 </div>
             </div>

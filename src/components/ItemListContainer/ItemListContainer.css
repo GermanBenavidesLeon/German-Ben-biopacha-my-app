@@ -33,3 +33,9 @@ img {
 .cardItem {
   margin: 10px 5px;
 }
+
+.marginSpin {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}

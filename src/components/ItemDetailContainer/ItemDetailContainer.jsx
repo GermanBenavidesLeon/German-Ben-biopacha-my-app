@@ -1,3 +1,6 @@
+import {useEffect, useState} from 'react'
+import ItemDetail from '../ItemDetail/ItemDetail'
+import '../ItemDetail/ItemDetail.css'
 
 const Productos = [
     {id: 1, name: "Nueces", categoria:'Frutos secos', description: 'La nuez es el fruto del nogal, de forma redondeada u ovoide, con una cáscara dura y rugosa de color pardo rojiza. ... Además de ser uno de los frutos secos más apreciados por su agradable sabor, es uno de los más ricos en aceite por lo que se usan para su obtención.', price: 400, imagen:'https://siemprejoven.es/Imagenes.ashx?FileName=/Imagenes/Contenidos/259/Cabecera/nueces-cerradas.jpg&xCrop=600&yCrop=349&xCoord=0&yCoord=36&xImage=600&yImage=421&xOrigCrop=688&yOrigCrop=400&Crop=true&Format=jpg'},
@@ -8,17 +11,50 @@ const Productos = [
     {id: 6, name: 'Arandanos secos', categoria:'Frutos secos', description: 'El arándano deshidratado se presenta en forma redonda, con una textura arrugada, uniforme en tamaño, aspecto brillante y color marrón rojizo. Tiene un sabor y un olor característicos del producto.', price: 450, imagen:'https://kipa.warmibusiness.com/wp-content/uploads/2020/09/arandanos.jpg'}
 ];
 
-
-export const getFetch = new Promise((resolve, reject)=>{
-    const condition=true
-     if(condition) {
+const getItems = new Promise((res, rej)=>{
+    const condition = true
+    if(condition){
         setTimeout(()=>{
-            resolve(Productos)
+        res(Productos)
         }, 2000)
-     } else{
-         setTimeout(()=>{
-           reject('404 not found')
-         }, 2000)
-     }
- })
- 
+    }  else {
+        setTimeout(()=>{
+        rej('404 not found')
+        }, 2000)
+
+    }
+})
+
+
+function ItemDetailContainer() {
+    const [items, setItems] = useState([])
+    const [loading, setloading] = useState(true)
+    useEffect(() => {
+        getItems
+        .then(res => {
+            setItems(res)
+        } )
+        .catch(err => console.log(err))
+        .finally(()=> setloading(false))
+
+        console.log(items);
+
+    },[items])
+
+    //let buscarItem = "Nueces"
+
+    //const resultadoItem = Productos.find(item => item.name === buscarItem)
+    //console.log(resultadoItem);
+
+    return (
+        <>
+        {loading ? <div class="d-flex align-items-center marginSpin">
+                        <strong>Loading...</strong>
+                        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                    </div>: Productos.map( items => <ItemDetail items={items} />)  
+                    }      
+        </>
+    )
+}
+
+export default ItemDetailContainer
