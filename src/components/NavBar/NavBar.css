@@ -2,4 +2,10 @@
     background-color: #7AFA94;
     padding: 10px;
     border-radius: 10px;
+
+}
+
+
+.linkClass {
+    text-decoration: none;
 }

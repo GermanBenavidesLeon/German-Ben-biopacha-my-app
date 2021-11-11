@@ -1,6 +1,7 @@
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap'; 
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -10,10 +11,16 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Nosotros</Nav.Link>
-                        <Nav.Link href="#link">Redes</Nav.Link>
+                        <Link to='/categoria' className='linkClass'>
+                            <Nav.Link href="#home">Home</Nav.Link>
+                        </Link>
+                        <Link to='Detail' className='linkClass'>
+                            <Nav.Link href="#link">Productos</Nav.Link>
+                        </Link>
                     </Nav>
-                        <CartWidget />
+                        <Link to='/Cart'>
+                            <CartWidget />
+                        </Link>
                         <NavDropdown title="Nuestra Tienda" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Productos Libres de Gluten</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Herboristeria</NavDropdown.Item>

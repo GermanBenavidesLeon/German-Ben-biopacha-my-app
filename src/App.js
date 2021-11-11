@@ -3,6 +3,8 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cart from './components/Cart/Cart';
+
 
 
 function App() {
@@ -11,9 +13,10 @@ function App() {
         <BrowserRouter>
           <NavBar   />
             <Switch>
-                <Route exact path="/"  element={<ItemListContainer  />} /> 
-                <Route path="/categoria/:id" element={<ItemDetailContainer />}/>
-                <Route path="/item/:id" element={<ItemDetailContainer />}/>
+                <Route exact path="/"  component={ItemListContainer } /> 
+                <Route path="/categoria" component={ItemListContainer }/>
+                <Route exact path="/Detail" component={ItemDetailContainer }/>
+                <Route exact path="/Cart" component={Cart}/>
             </Switch>
         </BrowserRouter>
       </div>

@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
 import ItemList from '../ItemList/ItemList'
 import Productos from '../Array/Productos'
-import './ItemListContainer.css'
 import { useParams } from 'react-router'
+import './ItemListContainer.css'
+
 
 const getFetch = new Promise((resolve, reject)=>{
     const condition=true

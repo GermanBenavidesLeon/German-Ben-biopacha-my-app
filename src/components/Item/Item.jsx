@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Item({prod}) {
+const Item = ({prod}) => {
     return (
  //       <div class="card mb-2" >
             <div class="row g-0 itemPro" key={prod.id}>
