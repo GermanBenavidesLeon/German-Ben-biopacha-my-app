@@ -1,15 +1,21 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
   return (
       <div>
-        <NavBar   />
-          <ItemListContainer greeting='Bienvenidos a Bio Pacha E-commerce' />
-          <ItemDetailContainer />
+        <BrowserRouter>
+          <NavBar   />
+            <Switch>
+                <Route exact path="/"  element={<ItemListContainer  />} /> 
+                <Route path="/categoria/:id" element={<ItemDetailContainer />}/>
+                <Route path="/item/:id" element={<ItemDetailContainer />}/>
+            </Switch>
+        </BrowserRouter>
       </div>
   );
 }

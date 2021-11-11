@@ -11,7 +11,7 @@ function Item({prod}) {
                     <div class="card-body">
                         <h5 class="card-title">{prod.name}</h5>
                         <p class="card-text">{prod.categoria}.</p>
-                        <a href='#' class="btn btnItemList">Detalles del Producto</a>
+                        <button class="btn btnItemList">Detalles del Producto</button>
                     </div>
                 </div>
             </div>

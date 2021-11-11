@@ -1,33 +1,58 @@
 import {useState, useEffect} from 'react'
-import { getFetch } from '../../getFetch'
 import ItemList from '../ItemList/ItemList'
-import ItemCount from '../ItemCount/ItemCount'
+import Productos from '../Array/Productos'
 import './ItemListContainer.css'
+import { useParams } from 'react-router'
 
+const getFetch = new Promise((resolve, reject)=>{
+    const condition=true
+     if(condition) {
+        setTimeout(()=>{
+            resolve(Productos)
+        }, 2000)
+     } else{
+         setTimeout(()=>{
+           reject('404 not found')
+         }, 2000)
+     }
+ })
 
-function ItemListContainer({greeting}) {
+const ItemListContainer = () => {
     const [producs, setProducs] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const {id} = useParams()
+
+
     useEffect(() => {
-        getFetch 
-        .then(respuesta => setProducs(respuesta))
-        .catch(error => console.log(error))
-        .finally(()=> setLoading(false))
-    },[])
+        if(id){
+            getFetch 
+                .then(respuesta => setProducs(respuesta.filter(prod => prod.categoria === id)))
+                .catch(error => console.log(error))
+                .finally(()=> setLoading(false))
+
+        } else {
+
+            getFetch
+                .then(respuesta => setProducs(respuesta))
+                .catch(err => console.log(err))
+                .finally(() => setLoading(false))
+        }
+            },[id])
+
 
     console.log(producs);
 
+
     return (
         <>
-            <h2>{greeting}</h2>
+            
             { loading ? <div class="d-flex align-items-center marginSpin">
                             <strong>Loading...</strong>
                         <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                         </div> : <ItemList producs={producs}/>
             }
             
-            <ItemCount initial={1} stock={5} />   
         </>
     )
 }

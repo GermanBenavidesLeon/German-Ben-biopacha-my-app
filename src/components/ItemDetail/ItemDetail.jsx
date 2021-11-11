@@ -1,7 +1,13 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount'
 
-function ItemDetail({items}) {
-    console.log(items);
+const ItemDetail = ({items}) => {
+    
+    const onAdd = () => {
+        console.log('Producto agregado')
+    }
+    
+
     return (
          <div class="card detailCard" key={items.id}>
             <img src={items.imagen} class="card-img-top" alt="imagen de los productos" />
@@ -14,7 +20,8 @@ function ItemDetail({items}) {
                 <li class="list-group-item">stock #</li>
             </ul>
             <div class="card-body">
-                <button class="btn btnItemList"><a href="#" >agregar al carrito</a></button>
+                <ItemCount initial={1} stock={5} name={items.name} onAdd={onAdd} />   
+                <button class="btn btnItemList">agregar al carrito</button>
             </div>
         </div>     
         
