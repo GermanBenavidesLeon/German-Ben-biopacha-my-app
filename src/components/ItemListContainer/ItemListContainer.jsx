@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react'
 import ItemList from '../ItemList/ItemList'
 import Productos from '../Array/Productos'
-import { useParams } from 'react-router'
-import './ItemListContainer.css'
+import { useParams } from 'react-router'//useParams es un custom hokk sirve para capturar mi parametro en la url, con useefect actualizamos los parametro
+import '../ItemListContainer/ItemListContainer.css'
 
 
 const getFetch = new Promise((resolve, reject)=>{
@@ -22,7 +22,7 @@ const ItemListContainer = () => {
     const [producs, setProducs] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const {id} = useParams()
+    const {id} = useParams() //destructuring del useParams
 
 
     useEffect(() => {
@@ -39,17 +39,15 @@ const ItemListContainer = () => {
                 .catch(err => console.log(err))
                 .finally(() => setLoading(false))
         }
-            },[id])
+            },[id]) //se ingresa dependencia donde me identifica la categoria.
 
-
-    console.log(producs);
-
+    console.log(id)
 
     return (
         <>
             
             { loading ? <div class="d-flex align-items-center marginSpin">
-                            <strong>Loading...</strong>
+                            <strong>Loading Producto...</strong>
                         <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
                         </div> : <ItemList producs={producs}/>
             }

@@ -11,7 +11,14 @@ a {
     color: black;
 }
 
-.btnItemList {
+.btnItemListDet {
     background-color: #7AFA94;
     border: 1px solid rgb(139, 138, 138);
+    
+    
+    margin-top: 50px;
+}
+
+h5, p {
+    color: black;
 }

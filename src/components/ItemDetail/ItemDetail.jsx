@@ -16,12 +16,11 @@ const ItemDetail = ({items}) => {
                 <p class="card-text">{items.description}</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">$ {items.price}</li>
+                <li class="list-group-item">Precio: $ {items.price}</li>
                 <li class="list-group-item">stock #</li>
             </ul>
             <div class="card-body">
                 <ItemCount initial={1} stock={5} name={items.name} onAdd={onAdd} />   
-                <button class="btn btnItemList">Agregar al carrito</button>
             </div>
         </div>     
         

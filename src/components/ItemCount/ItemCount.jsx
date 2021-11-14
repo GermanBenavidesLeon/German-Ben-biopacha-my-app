@@ -42,7 +42,7 @@ function ItemCount({stock, initial}) {
             <Button variant="outline-success" onClick={sumarItem}>+</Button>
             <label>{count}</label>
             <Button variant="outline-danger" onClick={restarItem}>-</Button>
-            <Button variant="outline-primary" onClick={onAdd}>Agregar al Carrito</Button>
+            <Button variant="outline-success" onClick={onAdd}>Agregar al Carrito</Button>
         </div>
     )
 }

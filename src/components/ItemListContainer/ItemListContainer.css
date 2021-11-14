@@ -16,8 +16,14 @@ h2 {
  }
  
  .btnItemList {
+    padding: 10px;
+    border-radius: 10px;
     background-color: #7AFA94;
-    border: 1px solid rgb(139, 138, 138);
+    border: 0px solid rgb(139, 138, 138);
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
 }
 
 .itemPro {
@@ -28,10 +34,11 @@ h2 {
 img {
   border-radius: 20px;
   margin: 10px 5px;
+  
 }
 
 .cardItem {
-  margin: 10px 5px;
+  margin: 10px 0px;
 }
 
 .marginSpin {

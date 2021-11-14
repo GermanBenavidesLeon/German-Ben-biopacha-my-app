@@ -40,7 +40,21 @@ const Productos = [
         categoria:'Frutos secos', 
         description: 'El arándano deshidratado se presenta en forma redonda, con una textura arrugada, uniforme en tamaño, aspecto brillante y color marrón rojizo. Tiene un sabor y un olor característicos del producto.', 
         price: 450, 
-        imagen:'https://kipa.warmibusiness.com/wp-content/uploads/2020/09/arandanos.jpg'}
+        imagen:'https://kipa.warmibusiness.com/wp-content/uploads/2020/09/arandanos.jpg'},
+
+    {   id: 7, 
+        name: 'Quinoa', 
+        categoria:'Semillas', 
+        description: 'Técnicamente se trata de una semilla, pero se conoce y se clasifica como un grano integral. Es nativa de los Andes de Bolivia, Chile y Perú.​', 
+        price: 65, 
+        imagen:'https://okdiario.com/img/recetas/2016/05/05/quinoa.jpg'},
+
+    {   id: 8, 
+        name: 'Chia', 
+        categoria:'Semillas', 
+        description: 'La chía se revela como un gran recurso de herbolario para combatir el colesterol alto y para prevenir las infecciones. ', 
+        price: 70, 
+        imagen:'https://cloudfront-eu-central-1.images.arcpublishing.com/larazon/F7QLSBYVE5HBJOFRLRVNTPXUKQ.jpg'}
 ]
 
 export default Productos
