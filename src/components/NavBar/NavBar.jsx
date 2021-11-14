@@ -11,37 +11,34 @@ const NavBar = () => {
                 <Navbar.Brand href="#">BioPacha</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
-                <Nav
-                    className="me-auto my-2 my-lg-0"
-                    style={{ maxHeight: '100px' }}
-                    navbarScroll
-                >
-                    <Link to='/'>
-                    <Nav.Link href="#action1">Home</Nav.Link>
-                    </Link>
-                    <NavDropdown title="Productos" id="navbarScrollingDropdown">
-                        <Link to='/' className='linkClass'>
-                            <NavDropdown.Item href="#action">Catalogo</NavDropdown.Item>
+                    <Nav
+                        className="me-auto my-2 my-lg-0"
+                        style={{ maxHeight: '100px' }}
+                        navbarScroll
+                    >
+                        <Nav.Link href="Home">Home</Nav.Link>
+                            <NavDropdown title="Productos" id="navbarScrollingDropdown">
+                                <Link to='/catalogo' className='linkClass'>
+                                    <NavDropdown.Item href="#Catalogo">Catalogo</NavDropdown.Item>
+                                </Link>
+                                <Link to='/categoria/Frutos secos' className='linkClass'>
+                                <NavDropdown.Item href="#action3">Frutos Secos</NavDropdown.Item>
+                                </Link>
+                                <Link to='/categoria/Semillas' className='linkClass'>
+                                <NavDropdown.Item href="#action4">Semillas</NavDropdown.Item>
+                                </Link>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action5">
+                                    Something else here
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link href="#" >
+                        Redes
+                        </Nav.Link>
+                        <Link to='/Cart'>
+                            <CartWidget />
                         </Link>
-                        <Link to='/categoria/Frutos secos' className='linkClass'>
-                        <NavDropdown.Item href="#action3">Frutos Secos</NavDropdown.Item>
-                        </Link>
-                        <Link to='/categoria/Semillas' className='linkClass'>
-                        <NavDropdown.Item href="#action4">Semillas</NavDropdown.Item>
-                        </Link>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action5">
-                            Something else here
-                        </NavDropdown.Item>
-                    </NavDropdown>
-                    
-                    <Nav.Link href="#" >
-                    Redes
-                    </Nav.Link>
-                    <Link to='/Cart'>
-                        <CartWidget />
-                    </Link>
-                </Nav>
+                    </Nav>
                 <Form className="d-flex">
                     <FormControl
                     type="search"

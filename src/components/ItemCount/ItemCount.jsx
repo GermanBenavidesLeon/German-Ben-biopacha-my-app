@@ -7,7 +7,7 @@ import {useState} from 'react';
 
 // Importe una libreria para incluir nuevos alert y no los de siempre
 
-function ItemCount({stock, initial}) {
+const ItemCount = ({stock, initial}) => {
     const [count, setCount] = useState(initial)
 
     const sumarItem = () =>{

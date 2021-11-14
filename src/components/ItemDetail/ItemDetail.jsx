@@ -20,7 +20,7 @@ const ItemDetail = ({items}) => {
                 <li class="list-group-item">stock #</li>
             </ul>
             <div class="card-body">
-                <ItemCount initial={1} stock={5} name={items.name} onAdd={onAdd} />   
+                <ItemCount initial={1} stock={5} onAdd={onAdd} />   
             </div>
         </div>     
         
