@@ -7,7 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
-    width: 450px;
+    width: 500px;
     border-radius: 10px;
     
 }
@@ -19,5 +19,11 @@ button{
 label {
     margin: 0px 20px;
     text-align: center;
+    
+}
+
+.nuevoBoton {
+    display: flex;
+
     
 }

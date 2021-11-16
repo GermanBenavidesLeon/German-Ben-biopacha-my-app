@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail'
 import Productos from '../Array/Productos'
 import '../ItemDetail/ItemDetail.css'
@@ -41,8 +41,10 @@ const ItemDetailContainer = () => {
         {loading ? <div class="d-flex align-items-center marginSpin">
                         <strong>Loading...</strong>
                         <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
-                    </div>: <Link to='/Detail'><ItemDetail items={items} /></Link>  
+                    </div>: <ItemDetail items={items} />  
                     } 
+
+                    
         </>  
     )
 }
