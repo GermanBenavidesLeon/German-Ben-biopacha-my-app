@@ -44,12 +44,14 @@ const ItemCount = ({stock, initial}) => {
 
     return (
         <div className="classCount">
-            <Button variant="outline-success" onClick={sumarItem}>+</Button>
-            <label>{count}</label>
-            <Button variant="outline-danger" onClick={restarItem}>-</Button>
             {
                 cambioButton ?
+                <>
+                <Button variant="outline-success" onClick={sumarItem}>+</Button>
+                <label>{count}</label>
+                <Button variant="outline-danger" onClick={restarItem}>-</Button>
                 <Button variant="outline-success" onClick={onAdd}>Agregar al Carrito</Button>
+                </>
             :
             <div className='nuevoBoton' onClick={onAdd}>
                 <Link to='/catalogo' className='linkClass'>
