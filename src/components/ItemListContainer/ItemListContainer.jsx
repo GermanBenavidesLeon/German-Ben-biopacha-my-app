@@ -5,6 +5,7 @@ import { useParams } from 'react-router'//useParams es un custom hokk sirve para
 import '../ItemListContainer/ItemListContainer.css'
 
 
+
 const getFetch = new Promise((resolve, reject)=>{
     const condition=true
      if(condition) {
@@ -41,10 +42,10 @@ const ItemListContainer = () => {
         }
             },[id]) //se ingresa dependencia donde me identifica la categoria.
 
-    console.log(id)
 
     return (
         <>
+       
             
             { loading ? <div class="d-flex align-items-center marginSpin">
                             <strong>Loading Producto...</strong>

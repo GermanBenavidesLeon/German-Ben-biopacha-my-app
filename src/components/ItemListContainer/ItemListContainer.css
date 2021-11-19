@@ -18,7 +18,7 @@ h2 {
  .btnItemList {
     padding: 10px;
     border-radius: 10px;
-    background-color: #7AFA94;
+    background-color: #29cf23;
     border: 0px solid rgb(139, 138, 138);
     width: 250px;
     margin-right: auto;
@@ -27,6 +27,7 @@ h2 {
 }
 
 .itemPro {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -46,3 +47,4 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+

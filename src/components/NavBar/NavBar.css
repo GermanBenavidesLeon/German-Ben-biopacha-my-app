@@ -1,5 +1,5 @@
 .navClass {
-    background-color: #7AFA94;
+    background-color: #29cf23;
     padding: 10px;
     border-radius: 10px;
 
@@ -8,4 +8,13 @@
 
 .linkClass {
     text-decoration: none;
+}
+
+#Logo {
+    width: 200px;
+    height: 200px;
+}
+
+.navbarHeader{
+    height: 200px;
 }

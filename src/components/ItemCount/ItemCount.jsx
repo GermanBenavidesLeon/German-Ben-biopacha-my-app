@@ -29,6 +29,7 @@ const ItemCount = ({stock, initial}) => {
     }
 
     const onAdd = () => {
+        setCambioButton(false)
         const MySwal = withReactContent(Swal)   // este es un alert de la libreria q instale
             MySwal.fire({
                 didOpen: () => {
@@ -38,7 +39,7 @@ const ItemCount = ({stock, initial}) => {
             return MySwal.fire(<p>agregaste {count} productos al carrito</p>)
             
         })
-        setCambioButton(false)
+        
     }
 
 

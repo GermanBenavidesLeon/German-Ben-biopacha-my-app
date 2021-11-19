@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useCartContext } from '../Context/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 
 
 
 const ItemDetail = ({items}) => {
+    const [count, setCount] = useState(0)
+
+    const {cartList, agregarCarrito} = useCartContext()
     
-    const onAdd = () => {
-        console.log('Producto agregado')
+    const onAdd = (cant) => {
+        setCount(cant)
+        agregarCarrito({...items, cantidad: 2})
     }
+
+    console.log(cartList);
     
     return (
          <div class="card detailCard" key={items.id}>
