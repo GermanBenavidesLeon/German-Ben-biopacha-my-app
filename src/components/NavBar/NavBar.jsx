@@ -3,10 +3,12 @@ import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 import imgLogo from './Logo.png'
+import { useCartContext } from '../Context/CartContext';
 
 
 
 const NavBar = () => {
+    const { cantidadItem } = useCartContext()
     return (
         <Navbar className='navbarHeader'>
             <h2><img id='Logo' src={imgLogo} alt="logo" /></h2>
@@ -18,26 +20,29 @@ const NavBar = () => {
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                         navbarScroll>
-                        <Nav.Link href="Home">Home</Nav.Link>
+                            <Link to='/' className='linkClass'>
+                            <Nav.Link href="Home">Home</Nav.Link>
+                            </Link>
                             <NavDropdown title="Productos" id="navbarScrollingDropdown">
-                                <Link to='/catalogo' className='linkClass'>
-                                    <NavDropdown.Item href="#Catalogo">Catalogo</NavDropdown.Item>
-                                </Link>
-                                <Link to='/categoria/Frutos secos' className='linkClass'>
-                                    <NavDropdown.Item href="#action3">Frutos Secos</NavDropdown.Item>
-                                </Link>
-                                <Link to='/categoria/Semillas' className='linkClass'>
-                                    <NavDropdown.Item href="#action4">Semillas</NavDropdown.Item>
-                                </Link>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Something else here
-                            </NavDropdown.Item>
+                            <Link to='/catalogo' className='linkClass'>
+                                <NavDropdown.Item variant="outline-success" href="#Catalogo">Catalogo</NavDropdown.Item>
+                            </Link>
+                            <Link to='/categoria/Frutos secos' className='linkClass'>
+                                <NavDropdown.Item href="#action3">Frutos Secos</NavDropdown.Item>
+                            </Link>
+                            <Link to='/categoria/Semillas' className='linkClass'>
+                                <NavDropdown.Item href="#action4">Semillas</NavDropdown.Item>
+                            </Link>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action5">
+                                Something else here
+                            |</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#" >
                         Redes
                         </Nav.Link>
-                        <Link to='/Cart'>
+                        <Link to='/Cart' className='linkClass cartWi'>
+                            { cantidadItem() !== 0 && cantidadItem() }
                             <CartWidget />
                         </Link>
                     </Nav>

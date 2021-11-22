@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 
 // Importe una libreria para incluir nuevos alert y no los de siempre
 
-const ItemCount = ({stock, initial}) => {
-    const [count, setCount] = useState(initial)
+const ItemCount = ({stock, initial, onAdd}) => {
+    const [count, setCount] = useState(1)
     const [cambioButton, setCambioButton] = useState(true)
 
     const sumarItem = () =>{
@@ -28,8 +28,11 @@ const ItemCount = ({stock, initial}) => {
           )
     }
 
-    const onAdd = () => {
+    const Agregar = () => {
+        onAdd(count)
+        setCount(1)
         setCambioButton(false)
+        
         const MySwal = withReactContent(Swal)   // este es un alert de la libreria q instale
             MySwal.fire({
                 didOpen: () => {
@@ -42,21 +45,19 @@ const ItemCount = ({stock, initial}) => {
         
     }
 
-
     return (
         <div className="classCount">
-            {
-                cambioButton ?
+            {cambioButton ?
                 <>
                 <Button variant="outline-success" onClick={sumarItem}>+</Button>
                 <label>{count}</label>
                 <Button variant="outline-danger" onClick={restarItem}>-</Button>
-                <Button variant="outline-success" onClick={onAdd}>Agregar al Carrito</Button>
+                <Button variant="outline-success" onClick={Agregar}>Agregar al Carrito</Button>
                 </>
             :
-            <div className='nuevoBoton' onClick={onAdd}>
+            <div className='nuevoBoton'>
                 <Link to='/catalogo' className='linkClass'>
-                    <Button variant='outline-success'  >Seguir comprando</Button>
+                    <Button variant='outline-success' >Seguir comprando</Button>
                 </Link>
                 <Link to='/Cart'>
                     <Button variant='outline-success' >Finalizar Compra</Button>

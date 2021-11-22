@@ -15,7 +15,7 @@ const Productos = [
         description: 'También conocido como cacahuate o cacahuete, el maní es una planta apreciada sobre todo por sus semillas comestibles.', price: 200, imagen:'https://www.saborusa.com/wp-content/uploads/2019/10/Sabias-que-el-mani-es-un-super-alimento-Foto-destacada.png'}, 
     
     {   id: 3,
-        name: "Castañas de caju", 
+        name: "Castañas caju", 
         categoria:'Frutos secos', 
         description: 'El cajú o castañas de cajú, es un fruto seco que se consume cada vez de manera más amplia en la alimentación de las personas. ', 
         price: 300, 

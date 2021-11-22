@@ -5,9 +5,8 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './components/Context/CartContext';
+import imgLogo from './components/NavBar/Logo.png'
 
-
-//category ID es un parametro
 function App() {
   return (
       <div>
@@ -15,7 +14,7 @@ function App() {
           <BrowserRouter>
             <NavBar   />
               <Routes>
-                  <Route exact path="/"  element={<ItemListContainer />} /> 
+                  <Route exact path="/"  element={<h2><img src={imgLogo} alt="logo" />Tienda Dietetica</h2>} /> 
                   <Route exact path="/catalogo"  element={<ItemListContainer />} /> 
                   <Route exact path="/categoria/:id" element={<ItemListContainer />}/>
                   <Route exact path="/detail/:id" element={<ItemDetailContainer />}/>

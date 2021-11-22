@@ -1,0 +1,19 @@
+.CartClass {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.itemUno {
+    background: #ccff90;
+}
+
+.itemDos {
+    background-color: #b2ff59;
+}
+
+.itemTres {
+    background-color: #76ff03;
+}
