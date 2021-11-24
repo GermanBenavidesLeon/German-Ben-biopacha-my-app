@@ -10,10 +10,43 @@ li {
     background: #ccff90;
 }
 
+.cartVacio {
+    background: #ccff90;
+    padding: 15px;
+    margin-top: 60px;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+}
+
+
+
 .itemDos {
     background-color: #b2ff59;
+    
+}
+
+
+.irCompras {
+    background: #b2ff59;
+    padding: 15px;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
 
 .itemTres {
     background-color: #76ff03;
+}
+
+.buttonCart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
 }

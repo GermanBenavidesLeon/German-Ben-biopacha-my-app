@@ -10,7 +10,7 @@ import { useCartContext } from '../Context/CartContext';
 const NavBar = () => {
     const { cantidadItem } = useCartContext()
     return (
-        <Navbar className='navbarHeader'>
+        <Navbar className='navbarHeader' sticky='top'>
             <h2><img id='Logo' src={imgLogo} alt="logo" /></h2>
                 <Container className="navClass">
                     <Navbar.Brand href="#">BioPacha</Navbar.Brand>
