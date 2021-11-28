@@ -12,7 +12,9 @@ const Productos = [
         id: 2, 
         name: "Mani", 
         categoria:'Frutos secos', 
-        description: 'También conocido como cacahuate o cacahuete, el maní es una planta apreciada sobre todo por sus semillas comestibles.', price: 200, imagen:'https://www.saborusa.com/wp-content/uploads/2019/10/Sabias-que-el-mani-es-un-super-alimento-Foto-destacada.png'}, 
+        description: 'También conocido como cacahuate o cacahuete, el maní es una planta apreciada sobre todo por sus semillas comestibles.', 
+        price: 200, 
+        imagen:'https://www.saborusa.com/wp-content/uploads/2019/10/Sabias-que-el-mani-es-un-super-alimento-Foto-destacada.png'}, 
     
     {   id: 3,
         name: "Castañas caju", 
@@ -54,7 +56,16 @@ const Productos = [
         categoria:'Semillas', 
         description: 'La chía se revela como un gran recurso de herbolario para combatir el colesterol alto y para prevenir las infecciones. ', 
         price: 70, 
-        imagen:'https://cloudfront-eu-central-1.images.arcpublishing.com/larazon/F7QLSBYVE5HBJOFRLRVNTPXUKQ.jpg'}
+        imagen:'https://cloudfront-eu-central-1.images.arcpublishing.com/larazon/F7QLSBYVE5HBJOFRLRVNTPXUKQ.jpg'},
+
+    {   id: 9, 
+        name: 'Aloe Vera', 
+        categoria:'Jugos', 
+        description: 'Depurativo del sistema digestivo, estimula el sistema inmunologico, estimula la secrecion biliar, regulador intestinal, elimina toxinas, colabora en la absorcion de nutrientes, accion lubircante en las articulaciones. ', 
+        price: 1000, 
+        imagen:'https://i.pinimg.com/originals/b1/fb/dd/b1fbdd4b057fb2f6cf8bc5c5a75ff6f7.jpg'}
+
+
 ]
 
 export default Productos

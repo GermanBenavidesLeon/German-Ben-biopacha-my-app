@@ -5,22 +5,17 @@ import ItemCount from '../ItemCount/ItemCount'
 
 
 const ItemDetail = ({items}) => {
-    const [count, setCount] = useState(0)
-
-    const {cartList, agregarItem} = useCartContext()
-    console.log(cartList);
-
+    const [, setCount] = useState(0)
+    const {agregarItem} = useCartContext()
 
     const onAdd = (cant) => {
         setCount(cant)
         agregarItem({...items, cantidad: cant})
-        console.log(`la cantidad es ${cant}`);
+       
     }
-
-    console.log(cartList);
     
     return (
-         <div class="card detailCard" >
+         <div class="card detailCard">
             <img src={items.imagen} class="card-img-top" alt="imagen de los productos" />
             <div class="card-body">
                 <h5 class="card-title">{items.name}</h5>

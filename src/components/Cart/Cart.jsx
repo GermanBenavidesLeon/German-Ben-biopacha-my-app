@@ -1,5 +1,5 @@
 import { useCartContext } from '../Context/CartContext'
-import { Button, tooltipClasses } from '@mui/material'
+import { Button } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
 import "animate.css"
 import './Cart.css'
@@ -18,7 +18,7 @@ const Cart = () => {
             { cartList.length === 0 ?
             <div>
                 <div class='cartVacio'>
-                <h4 class='animate__animated animate__zoomIn animate__delay-2s'>Tu Carrito de compras esta Vacio</h4>
+                <h4 class='animate__animated animate__zoomIn animate__delay-1s'>Tu Carrito de compras esta Vacio</h4>
                 </div>
                 <div class='irCompras'>
                 <Link to='/catalogo' className='linkClass'>
@@ -81,7 +81,3 @@ const Cart = () => {
 }
 
 export default Cart
-/*
-<li className='tablaProd' key={items.id}>Producto {items.name}</li>)}
-                {cartList.map(items => <li key={items.id}>Cantidad {items.cantidad}</li>)}
-                {cartList.map(items => <li key={items.id}>Precio {items.price}</li>*/

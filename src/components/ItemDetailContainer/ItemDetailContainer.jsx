@@ -3,36 +3,20 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail'
 import Productos from '../Array/Productos'
 import '../ItemDetail/ItemDetail.css'
+import { getFirestore } from '../../Service/getFirestore';
 
-const getItems = new Promise((res, rej)=>{
-    const condition = true
-
-        if(condition){
-            setTimeout(()=>{
-                res(Productos)
-            }, 2000)
-        }  else {
-            setTimeout(()=>{
-                rej('404 not found')
-            }, 2000)
-
-        }
-})
-
-console.log(Productos);
 
 const ItemDetailContainer = () => {
     const [items, setItems] = useState({})
     const [loading, setLoading] = useState(true)
 
     const {id} = useParams()
-
+    
     useEffect(() => {
-       
-       getItems
-            .then(res => setItems(res.find(item => item.id === parseInt (id))))
-            .catch(err => console.log(err))
-            .finally(()=> setLoading(false))    
+        const itemsFirestore = getFirestore()
+        itemsFirestore.collection('Productos').doc(id).get()
+        .then(res => setItems({id: res.id, ...res.data()}))
+        .finally(()=> setLoading(false))    
         
     },[id])
    

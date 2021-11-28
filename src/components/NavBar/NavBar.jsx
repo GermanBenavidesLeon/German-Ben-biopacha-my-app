@@ -27,7 +27,7 @@ const NavBar = () => {
                             <Link to='/catalogo' className='linkClass'>
                                 <NavDropdown.Item variant="outline-success" href="#Catalogo">Catalogo</NavDropdown.Item>
                             </Link>
-                            <Link to='/categoria/Frutos secos' className='linkClass'>
+                            <Link to='/categoria/Frutos Secos' className='linkClass'>
                                 <NavDropdown.Item href="#action3">Frutos Secos</NavDropdown.Item>
                             </Link>
                             <Link to='/categoria/Semillas' className='linkClass'>
