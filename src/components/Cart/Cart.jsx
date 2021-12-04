@@ -6,7 +6,7 @@ import "animate.css"
 import './Cart.css'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Modal from '../Modal/Modal'
+import MyVerticallyCenteredModal from '../Modal/Modal'
 
 
 const Cart = () => {
@@ -73,7 +73,7 @@ const Cart = () => {
                     Delete Cart
                 </Button>
                 <Button variant="outlined" color='success' onClick={()=> setModalShow(true)}>Generar Orden</Button>
-                <Modal show={modalShow} onHide={()=> setModalShow(false)} />
+                <MyVerticallyCenteredModal show={modalShow} onHide={()=> setModalShow(false)} />
             </div>
             </>
         }

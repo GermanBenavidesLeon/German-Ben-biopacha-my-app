@@ -10,7 +10,7 @@ const MyVerticallyCenteredModal = (props) => {
     const [ name, setName] = useState('')
     const [ phone, setPhone] = useState('')
     const [ email, setEmail] = useState('')
-    const [idOrder, setIdOrder] = useState('')
+    const [idOrder, setIdOrder] = useState(null)
 
     const {cartList, borrarCart, totalPrice} = useCartContext()
 
@@ -20,42 +20,30 @@ const MyVerticallyCenteredModal = (props) => {
         const db = getFirestore()
         const ordersCollection = db.collection('orders')
 
-        console.log(db);
-        console.log(comprador);
-
         let order = {}
         order.date = firebase.firestore.Timestamp.fromDate(new Date())
         order.buyer = {comprador}
-        order.total = totalPrice
-        order.items = cartList.map(cartItem => {
-            const id = cartItem.id
-            const name = cartItem.name
-            const price = cartItem.price * cartItem.cantidad
-
-            return {id, name, price}
-
-            console.log(id);
+        order.total = totalPrice()
+        order.items = cartList.map((items) => {
+            const id = items.id
+            const name = items.name
+            const price = items.price * items.cantidad
+            return {id, name, price}            
         })
 
         ordersCollection.add(order)
-        .then(res => setIdOrder(res.id))
-        console.log(order);
-        
-    }
+          .then((IdDocument) => { setIdOrder(IdDocument.id)
+       })
 
-    console.log(idOrder);
+    console.log('idOrder', idOrder);
+  }
 
     return (
       <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
+        {...props} size="lg" aria-labelledby="contained-modal-title-vcenter"centered
       >
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Igresar Datos
-          </Modal.Title>
+          <Modal.Title id="contained-modal-title-vcenter">Igresar Datos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <Form onSubmit={orderGerenate}>
@@ -72,7 +60,7 @@ const MyVerticallyCenteredModal = (props) => {
             </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={borrarCart} color='succes'>Close</Button>
+          <Button onClick={borrarCart} variant='success' type='submit'>Volver a la tienda</Button>
         </Modal.Footer>
       </Modal>
     );

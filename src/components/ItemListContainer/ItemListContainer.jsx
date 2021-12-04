@@ -11,19 +11,12 @@ const ItemListContainer = () => {
     const {id} = useParams() 
 
     useEffect(() => {
-        
-        const prodFirestore = getFirestore()
-
-        if (id) {
-            prodFirestore.collection('Productos').where('categoria', '==', id).get()
+        const db = getFirestore()
+        const dbFire = id ?  db.collection('Productos').where('categoria', '==', id) : db.collection('Productos')
+            dbFire.get()
             .then(data => setProducs( data.docs.map(pro => ( { id: pro.id, ...pro.data()}))))
             .finally(() => setLoading(false))
 
-        } else {
-            prodFirestore.collection('Productos').get()
-            .then(data => setProducs( data.docs.map(pro => ( { id: pro.id, ...pro.data()}))))
-            .finally(() => setLoading(false))
-        }
     },[id]) 
            
     return (
