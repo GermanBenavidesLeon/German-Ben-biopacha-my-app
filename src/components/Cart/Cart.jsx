@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useCartContext } from '../Context/CartContext'
 import { Button } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -5,20 +6,20 @@ import "animate.css"
 import './Cart.css'
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Modal from '../Modal/Modal'
 
 
 const Cart = () => {
-
+    const [modalShow, setModalShow] = useState(false);
+    
     const {cartList, borrarCart, deleteItem, cantidadItem, totalPrice} = useCartContext()
-
-    console.log(cartList);
 
     return (
         <div className='CartClass'>
             { cartList.length === 0 ?
             <div>
                 <div class='cartVacio'>
-                <h4 class='animate__animated animate__zoomIn animate__delay-1s'>Tu Carrito de compras esta Vacio</h4>
+                    <h4 class='animate__animated animate__zoomIn animate__delay-1s'>Tu Carrito de compras esta Vacio</h4>
                 </div>
                 <div class='irCompras'>
                 <Link to='/catalogo' className='linkClass'>
@@ -27,7 +28,6 @@ const Cart = () => {
                 </div>
             </div>
             :
-
             <>
             <h2> Tu carrito de compras </h2>
             <div> 
@@ -72,7 +72,8 @@ const Cart = () => {
                 <Button onClick={borrarCart} variant="outlined" color='success' startIcon={<DeleteIcon  />}>
                     Delete Cart
                 </Button>
-                <Button variant="outlined" color='success'>Finalizar compra</Button>
+                <Button variant="outlined" color='success' onClick={()=> setModalShow(true)}>Generar Orden</Button>
+                <Modal show={modalShow} onHide={()=> setModalShow(false)} />
             </div>
             </>
         }

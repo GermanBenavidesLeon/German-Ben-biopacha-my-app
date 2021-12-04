@@ -6,8 +6,6 @@ import './ItemCount.css';
 import {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-// Importe una libreria para incluir nuevos alert y no los de siempre
-
 const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(1)
     const [cambioButton, setCambioButton] = useState(true)
@@ -17,7 +15,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             'Ooppss!',
             'Limite de productos!',
             'warning'
-          )
+        )
     }
 
     const restarItem = () =>{
@@ -25,7 +23,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             'Por favor!',
             'Debes agregar al menos un producto!',
             'error'
-          )
+        )
     }
 
     const Agregar = () => {
@@ -40,9 +38,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
       }
         }).then(() => {
             return MySwal.fire(<p>agregaste {count} productos al carrito</p>)
-            
-        })
-        
+        })    
     }
 
     return (
@@ -60,7 +56,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <Button variant='outline-success' >Seguir comprando</Button>
                 </Link>
                 <Link to='/Cart'>
-                    <Button variant='outline-success' >Finalizar Compra</Button>
+                    <Button variant='outline-success' >Ir a Comprar</Button>
                 </Link>
             </div>
             }

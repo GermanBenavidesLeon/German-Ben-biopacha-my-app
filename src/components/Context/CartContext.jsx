@@ -14,13 +14,11 @@ const CartContextProvider = ( {children} ) => {
 
         if (index > -1) {
             const cantVieja = cartList[index].cantidad
-
-            cartList.splice(index, 1)
-            setCarList([...cartList, { ...item, cantidad: item.cantidad + cantVieja}])
+                cartList.splice(index, 1)
+                setCarList([...cartList, { ...item, cantidad: item.cantidad + cantVieja}])
         } else {
-            setCarList([...cartList, item ])
+                setCarList([...cartList, item ])
         }
-        
     }
 
     const totalPrice =() => {
@@ -31,7 +29,6 @@ const CartContextProvider = ( {children} ) => {
         setCarList(cartList.filter(item => item.id !== id))
     }
 
-
     const cantidadItem = () => {
         return cartList.reduce((acum, item)=> acum = acum + item.cantidad , 0)
     }
@@ -39,8 +36,6 @@ const CartContextProvider = ( {children} ) => {
     const borrarCart=()=> {
         setCarList([])
     }
-
-    console.log(cartList);
 
     return (
         <CartContext.Provider value={{
@@ -55,6 +50,5 @@ const CartContextProvider = ( {children} ) => {
         </CartContext.Provider>
     )
 }
-
 
 export default CartContextProvider

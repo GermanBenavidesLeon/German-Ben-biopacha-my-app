@@ -2,16 +2,13 @@ import React, { useState } from 'react'
 import { useCartContext } from '../Context/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 
-
-
 const ItemDetail = ({items}) => {
     const [, setCount] = useState(0)
     const {agregarItem} = useCartContext()
 
     const onAdd = (cant) => {
         setCount(cant)
-        agregarItem({...items, cantidad: cant})
-       
+        agregarItem({...items, cantidad: cant})   
     }
     
     return (
@@ -27,12 +24,9 @@ const ItemDetail = ({items}) => {
             </ul>
             <div class="card-body">
             <ItemCount initial={1} stock={5} onAdd={onAdd} /> 
-            
             </div>
-        </div>     
-        
+        </div>         
     )
 }
-
 
 export default ItemDetail

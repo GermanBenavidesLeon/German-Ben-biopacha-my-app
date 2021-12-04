@@ -23,5 +23,3 @@ const Item = ({prod}) => {
 }
 
 export default Item
-//card mb-2
-//
