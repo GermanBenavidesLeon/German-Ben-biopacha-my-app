@@ -18,6 +18,7 @@ Para este proyecto por el momento e instalado las siguientes librerias:
 | Router-react-dom '6.0.1'| Se utilizo para las rutas de nuestra App |
 | Material Ui '5.1.1' | Se utilizaron para estilos iconos y botones |
 
+
 > Con respecto al diseño o estilos de la App
 > utilizo las librerias de Boostrap y algunos
 > ajustes con Css. 
