@@ -24,7 +24,7 @@ Para este proyecto por el momento e instalado las siguientes librerias:
 
 ## Instalacion
 
-React Js requires [Node.js](https://nodejs.org/es/) v10+ to run.
+React Js requires [Node.js](https://nodejs.org/es/) to run.
 
 ```
 npx create-react-app my-app
