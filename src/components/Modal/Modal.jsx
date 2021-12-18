@@ -93,7 +93,7 @@ const MyVerticallyCenteredModal = (props) => {
                   <input type="text"
                          name='phone'  
                          className={
-                          phone.length === 14 ?  'form-control is-valid' : 'form-control is-invalid'
+                          phone.length === 10 ?  'form-control is-valid' : 'form-control is-invalid'
                         }
                          value={phone} 
                          onChange={(e) => setPhone(e.target.value)} required/>
@@ -101,7 +101,7 @@ const MyVerticallyCenteredModal = (props) => {
                   Ok!
                   </div>
                   <div className="invalid-feedback">
-                    Por favor ingresar codigo de area ej 011!
+                    ingresar numero sin espacios, solo el nuemro ej: 1100000000
                   </div>
                 </div>
                 <div className="col-md-6">
