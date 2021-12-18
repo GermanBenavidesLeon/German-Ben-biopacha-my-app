@@ -11,7 +11,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [cambioButton, setCambioButton] = useState(true)
 
     const sumarItem = () =>{
-        count < stock ? setCount(count + 1) : Swal.fire(   // este es un alert de la libreria q instale
+        count < stock ? setCount(count + 1) : Swal.fire(   
             'Ooppss!',
             'Limite de productos!',
             'warning'
@@ -19,7 +19,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     const restarItem = () =>{
-        count > initial ? setCount(count - 1) : Swal.fire(      // este es un alert de la libreria q instale
+        count > initial ? setCount(count - 1) : Swal.fire(      
             'Por favor!',
             'Debes agregar al menos un producto!',
             'error'
@@ -31,13 +31,13 @@ const ItemCount = ({stock, initial, onAdd}) => {
         setCount(1)
         setCambioButton(false)
         
-        const MySwal = withReactContent(Swal)   // este es un alert de la libreria q instale
+        const MySwal = withReactContent(Swal)   
             MySwal.fire({
                 didOpen: () => {
             MySwal.clickConfirm()
       }
         }).then(() => {
-            return MySwal.fire(<p>agregaste {count} productos al carrito</p>)
+            return MySwal.fire(<h5>agregaste {count} productos al carrito</h5>)
         })    
     }
 

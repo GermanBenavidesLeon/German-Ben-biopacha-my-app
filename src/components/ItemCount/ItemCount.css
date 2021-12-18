@@ -1,13 +1,13 @@
 .classCount {
-    background-color: #4efc19;
+    background-color: #ccff90;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding: 15px;
-    width: 500px;
+    padding: 10px;
+    width: 460px;
     border-radius: 10px;
     
 }

@@ -1,15 +1,5 @@
-.navClass {
-    background-color: #76ff03;
-    padding: 15px;
-    border-radius: 10px;   
-    
-    
-}
-
-
 .linkClass {
-    text-decoration: none;
-    
+    text-decoration: none;    
     
 }
 
@@ -26,6 +16,49 @@
 }
 
 .navbarHeader{
-    height: 140px;
+    background: #ccff90;
+    height: 100px;
+}
 
+.searchMenu {
+    height: 50px;
+}
+
+.searchList {
+    background: #f1f8e9;
+    height: 110px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.searchList::-webkit-scrollbar{
+    display: none;
+}
+
+.searchList .classItem {
+    height: 50px; 
+}
+
+.iconSearch {
+    font-size: 22px;
+    position: fixed;
+    left: 1200px;
+}
+
+.inputIcon {
+    display: flex;
+    align-items: center;
+}
+
+li:hover {
+    background: #ccff90;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#clearIcon {
+    cursor: pointer;
 }

@@ -18,8 +18,8 @@ const Cart = () => {
         <div className='CartClass'>
             { cartList.length === 0 ?
             <div>
-                <div class='cartVacio'>
-                    <h4 class='animate__animated animate__zoomIn animate__delay-1s'>Tu Carrito de compras esta Vacio</h4>
+                <div className='cartVacio'>
+                    <h4 className='animate__animated animate__zoomIn animate__delay-1s'>Tu Carrito de compras esta Vacio</h4>
                 </div>
                 <div class='irCompras'>
                 <Link to='/catalogo' className='linkClass'>
@@ -31,8 +31,8 @@ const Cart = () => {
             <>
             <h2> Tu carrito de compras </h2>
             <div> 
-                <table class="table table-hover table-bordered border-success container">
-                    <thead class='table border-success'>
+                <table className="table table-hover table-bordered border-success container">
+                    <thead className='table border-success'>
                         <tr>
                             <th scope="col">Producto</th>
                             <th scope="col">Cantidad</th>
@@ -41,7 +41,7 @@ const Cart = () => {
                         </tr>
                     </thead>
                     <tbody>   
-                        {cartList.map(items =>  <tr class='itemUno'>
+                        {cartList.map(items =>  <tr className='itemUno'>
                                                     <td>{ items.name }</td>
                                                     <td>{ items.cantidad }</td>
                                                     <td>$ { items.price }</td>

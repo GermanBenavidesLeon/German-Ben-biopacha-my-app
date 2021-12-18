@@ -1,0 +1,38 @@
+.textHome {
+    background: #c5e1a5;
+    width: 80%;
+    padding: 15px;
+    margin: 20px auto;
+    font-size: 18px;
+    border-radius: 5px; 
+    border: solid 1px #76ff03;
+}
+
+.carousel_top {
+    margin-top: 0px;
+}
+
+.imgCarousel {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    background: #b2ff59;
+    border-radius: 5px;
+    border: solid 1px #76ff03;
+
+}
+
+.wH {
+    width: 200px;
+    height: 200px;
+}
+
+.carouselButton {
+    
+    width: 100px;
+    margin: 0px 132px;
+}

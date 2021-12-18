@@ -21,7 +21,7 @@ const Productos = [
         categoria:'Frutos secos', 
         description: 'El cajú o castañas de cajú, es un fruto seco que se consume cada vez de manera más amplia en la alimentación de las personas. ', 
         price: 300, 
-        imagen:'https://www.dieteticasoler.com.ar/productos/1526054711/01_1526054711.jpg'},
+        imagen:'https://actualfruveg.com/wp-content/uploads/2020/10/Caju-foto-1-fruto-2.jpg'},
     
     {   id: 4, 
         name: 'Almendras', 

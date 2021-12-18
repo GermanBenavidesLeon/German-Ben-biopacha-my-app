@@ -12,18 +12,17 @@ const ItemDetail = ({items}) => {
     }
     
     return (
-         <div class="card detailCard">
-            <img src={items.imagen} class="card-img-top" alt="imagen de los productos" />
-            <div class="card-body">
-                <h5 class="card-title">{items.name}</h5>
-                <p class="card-text">{items.description}</p>
+         <div className="card detailCard" key={items.id}>
+            <img id='imgDetail' src={items.imagen} class="" alt="imagen de los productos" />
+            <div>
+                <h5>{items.name}</h5>
+                <p className="card-text">{items.description}</p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Precio: $ {items.price}</li>
-                <li class="list-group-item">stock #</li>
+            <ul className="list-group list-group-flush">
+                <li className="list-group-item">Precio: $ {items.price}</li>
             </ul>
-            <div class="card-body">
-            <ItemCount initial={1} stock={5} onAdd={onAdd} /> 
+            <div>
+                <ItemCount initial={1} stock={5} onAdd={onAdd} /> 
             </div>
         </div>         
     )

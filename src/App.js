@@ -5,21 +5,25 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './components/Context/CartContext';
-import imgLogo from './components/NavBar/Logo.png'
+import { Footer } from './components/Footer/Footer';
+import Home from './components/Home/Home';
+import Productos from '../src/components/Array/Productos.jsx'
+
 
 function App() {
   return (
       <div>
         <CartContextProvider>
           <BrowserRouter>
-            <NavBar   />
+            <NavBar data={Productos} />
               <Routes>
-                  <Route exact path="/"  element={<h2><img src={imgLogo} alt="logo" />Tienda Dietetica</h2>} /> 
+                  <Route exact path="/"  element={<Home />} /> 
                   <Route exact path="/catalogo"  element={<ItemListContainer />} /> 
                   <Route exact path="/categoria/:id" element={<ItemListContainer />}/>
                   <Route exact path="/detail/:id" element={<ItemDetailContainer />}/>
                   <Route exact path="/Cart" element={<Cart />}/>
               </Routes>
+            <Footer  />  
           </BrowserRouter>
         </CartContextProvider>
       </div>

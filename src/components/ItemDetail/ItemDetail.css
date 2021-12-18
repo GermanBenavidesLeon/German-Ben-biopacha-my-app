@@ -1,9 +1,10 @@
 .detailCard {
-    width: 50%;
-    margin-top: 50px;
+    width: 40%;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     border: none;
+    align-items: center;
 }
 
 a {
@@ -11,14 +12,25 @@ a {
     color: black;
 }
 
+#imgDetail {
+    width: 400px;
+    height: 360px;
+}
+
 .btnItemListDet {
     background-color: #76ff03;
     border: 1px solid rgb(139, 138, 138);
-    
-    
     margin-top: 50px;
 }
 
-h5, p {
+h5 {
+    font-size: 24px;
+    color: black;
+}
+
+
+p {
+    font-size: 16px;
+    width: 400px;
     color: black;
 }

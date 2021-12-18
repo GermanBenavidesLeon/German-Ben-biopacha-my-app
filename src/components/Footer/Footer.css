@@ -1,0 +1,16 @@
+.footer {
+    margin-top: 30px;
+    background: #b2ff59;
+    padding: 25px 15px 3px 15px;
+}
+
+.sectionFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copy {
+    background: #76ff03;
+    margin-top: 10px;
+}
+

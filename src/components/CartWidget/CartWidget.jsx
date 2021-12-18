@@ -4,7 +4,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 function CartWidget() {
     return (
         <div>
-          <ShoppingCartIcon  />
+          <ShoppingCartIcon   />
         </div>
     )
 }
