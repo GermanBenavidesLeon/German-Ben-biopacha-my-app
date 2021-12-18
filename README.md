@@ -1,18 +1,22 @@
 # BioPacha
 ## Ecommerce Tienda dietetica 
 
-DEMO: https://biopachatiendadetetica.netlify.app/
+##### [DEMO](https://biopachatiendadetetica.netlify.app/)
 
 Se presento la oportunidad de llevar un proyecto real y poder incluirlo en mi curso de React Js, la idea es crear un ecommerce, donde se permita realizar compras o generar ordenes onLine de todos los productos de la tienda y ademas adquirir servicios de medicina alternativa.
 
 Para este proyecto por el momento e instalado las siguientes librerias:
 
-- Boostrap
-- React-boostrap
-- React-icons
-- Sweet Alert-React
-- Router-react-dom
-- Material Ui
+| Librerias  | Utilizacion |
+| ------ | ------ |
+| Animate Css '4.1.1' | La animacion para el titulo en el cart.  |
+| Firebase '8.9.1' | No es una libreria, es una plataforma de google para nuestra base de datos.|
+| Boostrap '5.1.3' | Se utilizo para los estilos del formulario y otros. |
+| React-boostrap '2.0.0' |Se utilizo para el Modal, NavBar y otros estilos para la aplicacion.|
+| React-icons '4.3.1' | Se utilizo para la mayoria de iconos |
+| Sweet Alert-React '4.2.0' | Se utilizo para los mensajes en ItemCount y formulario |
+| Router-react-dom '6.0.1'| Se utilizo para las rutas de nuestra App |
+| Material Ui '5.1.1' | Se utilizaron para estilos iconos y botones |
 
 > Con respecto al diseño o estilos de la App
 > utilizo las librerias de Boostrap y algunos
