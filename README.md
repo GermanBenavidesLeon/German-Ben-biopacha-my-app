@@ -23,6 +23,7 @@ Para este proyecto por el momento e instalado las siguientes librerias:
 > utilizo las librerias de Boostrap y algunos
 > ajustes con Css. 
 
+
 ## Instalacion
 
 React Js requires [Node.js](https://nodejs.org/es/) to run.
@@ -41,3 +42,4 @@ Para este Proyecto Ecommerce BioPacha tienda detetica, se generaron diferentes c
 | ------ | ------ |
 | GitHub | [plugins/github/README.md][PlGh] |
 | Google Drive | [plugins/googledrive/README.md][PlGd] |
+
