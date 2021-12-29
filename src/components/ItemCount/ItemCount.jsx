@@ -35,10 +35,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
             MySwal.fire({
                 didOpen: () => {
             MySwal.clickConfirm()
-      }
-        }).then(() => {
-            return MySwal.fire(<h5>agregaste {count} productos al carrito</h5>)
-        })    
+        }
+            }).then(() => {
+                return MySwal.fire(<h5>agregaste {count} productos al carrito</h5>)
+            })    
     }
 
     return (

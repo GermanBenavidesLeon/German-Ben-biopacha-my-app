@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import { Modal, Button } from 'react-bootstrap'
+import { Modal, Alert } from 'react-bootstrap' 
 import 'bootstrap'
 import { useCartContext } from '../Context/CartContext'
-import Swal from 'sweetalert2'
 import firebase from "firebase"
 import 'firebase/firestore'
 import { getFirestore } from '../../Service/getFirestore'
@@ -12,7 +11,7 @@ const MyVerticallyCenteredModal = (props) => {
     const [ phone, setPhone] = useState('')
     const [ email, setEmail] = useState('')
     const [ emailOk, setEmailOk] = useState('')
-    const [, setIdOrder] = useState('')
+    const [ idOrder, setIdOrder] = useState()
 
     const {cartList, borrarCart, totalPrice} = useCartContext()
 
@@ -30,39 +29,14 @@ const MyVerticallyCenteredModal = (props) => {
             const id = items.id
             const name = items.name
             const price = items.price * items.cantidad
-            return {id, name, price}            
+            return {id, name, price}          
         })
-
-        e.target.reset()
 
         ordersCollection.add(order)
           .then((IdDocument) => { setIdOrder(IdDocument.id)
-       })
+       })  
   }
-
-  const buttonCompraFinal = () => {
-    const inputs = {name, phone, email, emailOk}
-
-    if (inputs === true){
-      return (
-          Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Su compra se genero exitosamente',
-          showConfirmButton: true,
-        }))
-    } else {
-        return (
-          Swal.fire({
-          position: 'center',
-          icon: 'error',
-          title: 'Por ingresar todos los datos',
-          showConfirmButton: true,
-      })
-    )}  
-     
-  }
-
+  
     return (
       <Modal
         {...props} size="lg" aria-labelledby="contained-modal-title-vcenter"centered
@@ -88,7 +62,7 @@ const MyVerticallyCenteredModal = (props) => {
                     Por favor ingresar nombre y apellido!
                   </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-6">
                   <label className="form-label">Telefono</label>
                   <input type="text"
                          name='phone'  
@@ -98,7 +72,7 @@ const MyVerticallyCenteredModal = (props) => {
                          value={phone} 
                          onChange={(e) => setPhone(e.target.value)} required/>
                   <div className="valid-feedback">
-                  Ok!
+                    Ok!
                   </div>
                   <div className="invalid-feedback">
                     ingresar numero sin espacios, solo el nuemro ej: 1100000000
@@ -133,21 +107,22 @@ const MyVerticallyCenteredModal = (props) => {
                   <div className="invalid-feedback">
                     Por favor debe ingresar todos los datos!
                   </div>
-                  <button 
-                    className="btn btn-success"
-                    type="submit" 
-                    onClick={buttonCompraFinal}>Finalizar compra
-                  </button>
+                  <div className='sectionFooter'>
+                    <button className='btn btn-success'>Finalizar compra</button>
+                    <button onClick={borrarCart} className='btn btn-success' type='submit'>Volver a la tienda</button>
+                  </div>
                 </div>
           </form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={borrarCart} variant='success' type='submit'>Volver a la tienda</Button>
-        </Modal.Footer>
+        <Alert variant="success">
+          <Alert.Heading>Compra exitosa!</Alert.Heading>
+            <h6 className="mb-0">
+              {idOrder ? ` Su orden se genero con el codigo: ${idOrder}` : null}
+            </h6>
+        </Alert>
       </Modal>
     );
-  }
-  
+}
   export default MyVerticallyCenteredModal;
 
   
