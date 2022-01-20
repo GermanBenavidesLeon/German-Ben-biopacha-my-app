@@ -59,7 +59,7 @@ const NavBar = ({data}) => {
                                 Nuestros clientes
                             </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="#" >
+                            <Nav.Link className='linkTerapia' href="#" >
                                 Terapias Complementarias
                             </Nav.Link>
                             <Link to='/Cart' className='linkClass cartWi'>
