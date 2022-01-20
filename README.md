@@ -1,7 +1,7 @@
 # BioPacha
 ## Ecommerce Tienda dietetica 
 
-##### [DEMO](https://biopachatienda.netlify.app/)
+##### [DEMO](https://biopachaalmacennatural.netlify.app/)
 
 Se presento la oportunidad de llevar un proyecto real y poder incluirlo en mi curso de React Js, la idea es crear un ecommerce, donde se permita realizar compras o generar ordenes onLine de todos los productos de la tienda y ademas adquirir servicios de medicina alternativa.
 
