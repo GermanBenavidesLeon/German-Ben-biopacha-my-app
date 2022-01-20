@@ -4,9 +4,64 @@
     padding: 25px 15px 3px 15px;
 }
 
+@media (max-width: 1120px){
+    .footer {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 820px){
+    .footer {
+        font-size: 18px;
+        padding: 10px 0px 10px 15px
+    }
+
+    .mediafooter{
+        padding: 0px;
+        margin: 0px;
+      
+    }
+
+    .ulMedia{
+        padding-left: 15px;
+        margin: 0px 15px;
+    }
+
+}
+
+@media (max-width: 620px){
+    .footer {
+        font-size: 12px;
+        padding: 10px 0px 10px 15px
+    }
+
+    .sectionFooter{
+        display: flex;
+        
+    }
+
+    .mediafooter{
+        padding: 0px;
+        margin: 0px;
+        width: 60%;
+    }
+
+    .ulMedia{
+        padding-left: 15px;
+        margin: 0px 15px;
+    }
+
+}
+
 .sectionFooter {
     display: flex;
     justify-content: space-between;
+}
+
+.contacFooter{
+    text-align: right;
+    
 }
 
 .copy {

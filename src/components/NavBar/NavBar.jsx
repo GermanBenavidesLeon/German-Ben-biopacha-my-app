@@ -36,34 +36,31 @@ const NavBar = ({data}) => {
                 <Container className="fluid">
                     <Navbar.Brand href="#">BioPacha</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                            className="me-auto my-2 my-lg-0"
-                            style={{ maxHeight: '100px' }}
-                            navbarScroll>
-                                <Link to='/' className='linkClass'>
-                                <Nav.Link href="Home">Home</Nav.Link>
-                                </Link>
-                                <NavDropdown title="Productos" id="navbarScrollingDropdown">
-                                <Link to='/catalogo' className='linkClass'>
-                                    <NavDropdown.Item variant="outline-success" href="#Catalogo">Catalogo</NavDropdown.Item>
-                                </Link>
-                                <Link to='/categoria/Frutos Secos' className='linkClass'>
-                                    <NavDropdown.Item href="#action3">Frutos Secos</NavDropdown.Item>
-                                </Link>
-                                <Link to='/categoria/Semillas' className='linkClass'>
-                                    <NavDropdown.Item href="#action4">Semillas</NavDropdown.Item>
-                                </Link>
-                                <Link to='/categoria/Jugos' className='linkClass'>
-                                    <NavDropdown.Item href="#action5">Jugos</NavDropdown.Item>
-                                </Link>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Something else here
-                                |</NavDropdown.Item>
+                    <Navbar.Collapse className="mediaNav" id="navbarScroll">
+                        <Nav>
+                            <Link to='/' className='linkClass'>
+                            <Nav.Link href="Home">Home</Nav.Link>
+                            </Link>
+                            <NavDropdown title="Productos" id="navbarScrollingDropdown">
+                            <Link to='/catalogo' className='linkClass'>
+                                <NavDropdown.Item variant="outline-success" href="#Catalogo">Catalogo</NavDropdown.Item>
+                            </Link>
+                            <Link to='/categoria/Frutos Secos' className='linkClass'>
+                                <NavDropdown.Item href="#action3">Frutos Secos</NavDropdown.Item>
+                            </Link>
+                            <Link to='/categoria/Semillas' className='linkClass'>
+                                <NavDropdown.Item href="#action4">Semillas</NavDropdown.Item>
+                            </Link>
+                            <Link to='/categoria/Jugos' className='linkClass'>
+                               <NavDropdown.Item href="#action5">Jugos</NavDropdown.Item>
+                            </Link>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action5">
+                                Nuestros clientes
+                            </NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="#" >
-                                Redes
+                                Terapias Complementarias
                             </Nav.Link>
                             <Link to='/Cart' className='linkClass cartWi'>
                                 { cantidadItem() !== 0 && cantidadItem() }

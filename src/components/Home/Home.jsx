@@ -20,7 +20,7 @@ import '../Home/Home.css'
 const Home = () => {
     return (
         <main>
-            <h2 className='home__Logo-Titulo'><img className='App-logo' src={imgLogo} alt="logo" />Tienda Dietetica</h2>,
+            <h2 className='home__Logo-Titulo'><img className='App-logo' src={imgLogo} alt="logo" />Almacen Natural</h2>,
                 <div id="carouselExampleIndicators" class="carousel slide mb-3 carousel_top" data-bs-ride="carousel">
                     <div class="carousel-inner imgCarousel">
                         <div class="carousel-item active">
@@ -42,18 +42,18 @@ const Home = () => {
                             <img src={Local0} className="wH" alt="..."/>
                         </div>
                     </div>
-                    <button className="carousel-control-prev carouselButton" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <button className="carousel-control-prev buttonPrev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span className="visually-hidden">Previous</span>
                     </button>
-                    <button className="carousel-control-next carouselButton" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <button className="carousel-control-next buttonNext" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span className="carousel-control-next-icon item" aria-hidden="true"></span>
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
             <div>
-                <p className='textHome'>La idea principal del almacen dietetico es poder brindarles a las personas del barrio y las que se vengan a atender en nuestro consultorio la posibilidad de incorporar alimentos saludables, naturales, en lo posible, libres de aditivos y conservantes, ya que una parte importante de la sanacion de nuestros cuerpos (tanto fisico-mental y emocional) pasan por los alimentos que ingerimos, las bebidas que consumimos y los hábitos que incorporamos. 
-                    En Biopacha buscamos una vida mas armoniosa y saludable para nosotros mismos y todos aquellos que quieran acompañarnos en ese reto, romper con los malos habitos, la mala alimentación y las estructuras que nos imposibilitan tener un cuerpo cada vez mas libre y saludable.
+                <p className='textHome'>Nuestro objetivo es poder brindarles a las personas la posibilidad de incorporar alimentos saludables, naturales, en lo posible, libres de aditivos y conservantes, ya que una parte importante de la sanacion de nuestros cuerpos (tanto fisico-mental y emocional) pasan por los alimentos que ingerimos, las bebidas que consumimos y los hábitos que incorporamos. 
+                                        En Biopacha buscamos una vida mas armoniosa y saludable para nosotros mismos y todos aquellos que quieran acompañarnos en ese reto, romper con los malos habitos, la mala alimentación y las estructuras que nos imposibilitan tener un cuerpo cada vez mas libre y vital.
                 </p>
             </div>
         </main>
